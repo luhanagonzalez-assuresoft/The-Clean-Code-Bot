@@ -1,0 +1,11 @@
+groq>=0.9.0
+python-dotenv>=1.0.1
+requests>=2.31.0
+click>=8.1.7
+
+# Recommended project setup (clean install flow)
+# python -m venv venv
+# source venv/bin/activate   # macOS/Linux
+# venv\Scripts\activate      # Windows
+
+# pip install -r requirements.txt
