@@ -1,44 +1,72 @@
 # The-Clean-Code-Bot
 
-🧠 Code Refactoring CLI Tool
+# 🧠 Code Refactoring CLI Tool
 
-This project is a Python-based command-line interface (CLI) tool that takes poorly structured or “dirty” source code and transforms it into clean, maintainable, and well-documented code following SOLID principles.
+A Python-based command-line interface (CLI) tool that takes poorly structured or "dirty" source code and transforms it into clean, maintainable, and well-documented code following SOLID principles.
 
-The tool leverages a large language model to analyze and refactor code while preserving original functionality, and it automatically adds structured documentation such as docstrings.
+The tool uses a large language model to refactor code while preserving functionality and automatically adds structured documentation such as docstrings.
 
-⚙️ Design Approach
+---
 
-The system was built using a modular pipeline architecture that separates concerns into distinct stages:
+## ⚙️ Design Approach
 
-Input handling (CLI layer) – manages user input and file paths
-Validation & sanitization layer – ensures safe processing of input code and mitigates prompt injection risks
-Processing engine – orchestrates transformation of code using an LLM-based refactoring step
-Output formatting layer – cleans and standardizes model output for production-ready code
+The system is built using a modular pipeline architecture with clear separation of concerns:
 
-This staged pipeline design ensures maintainability, extensibility, and clear separation of responsibilities.
+- **CLI Layer**
+  - Handles user input and file paths
 
-🔐 Security Considerations
+- **Validation & Sanitization Layer**
+  - Ensures safe processing of input code
+  - Reduces risks from malformed or malicious input
 
-To reduce risks associated with executing or processing untrusted input, the system includes:
+- **Processing Engine**
+  - Orchestrates LLM-based code refactoring
+  - Applies structured transformation instructions
 
-Input size validation
-Basic prompt injection filtering
-Strict separation between code data and model instructions
-🤖 AI-Assisted Refactoring
+- **Output Formatting Layer**
+  - Cleans and standardizes model output
+  - Ensures production-ready formatting
 
-The tool uses an LLM (via API) to:
+This pipeline-based structure improves maintainability, extensibility, and clarity of the system.
 
-Refactor code according to SOLID principles
-Improve readability and structure
-Add comprehensive documentation
-Preserve original functionality
-📦 Goals
-Automate code cleanup for legacy or undocumented projects
-Enforce clean architecture principles
-Demonstrate secure integration of LLMs in developer tooling
-Provide a lightweight extensible CLI framework for future enhancements
-🚀 Future Improvements
-AST-based code parsing for more precise refactoring
-Multi-language support
-Batch processing with progress tracking
-Plugin system for custom refactoring rules
+---
+
+## 🔐 Security Considerations
+
+The tool includes basic safeguards for handling untrusted input:
+
+- File size validation
+- Simple prompt injection filtering
+- Strict separation between code content and model instructions
+
+---
+
+## 🤖 AI-Assisted Refactoring
+
+The system uses a large language model to:
+
+- Refactor code using SOLID principles
+- Improve readability and structure
+- Add comprehensive documentation (docstrings)
+- Preserve original functionality
+
+---
+
+## 🎯 Project Goals
+
+- Automate cleanup of legacy or undocumented code
+- Improve code quality and maintainability
+- Demonstrate secure integration of LLMs into developer tools
+- Provide a lightweight and extensible CLI framework
+
+---
+
+## 🚀 Future Improvements
+
+- AST-based parsing for deeper code understanding
+- Multi-language support (Python, JavaScript, etc.)
+- Batch processing with progress tracking
+- Plugin system for custom refactoring rules
+- Diff output view (before vs after)
+
+---
